@@ -1,10 +1,6 @@
 # TMbed: Unofficial Google Colab Interface
 
 <div align="center">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" height="40" alt="Google Colab Badge">
-</div>
-
-<div align="center">
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lUawtexMQaoCt6UWQN56P3MyvOTIsMBE?usp=sharing)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
