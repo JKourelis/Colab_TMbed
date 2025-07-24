@@ -25,7 +25,8 @@ This Google Colab notebook provides an easy-to-use interface for **TMbed**, a tr
 
 - **🧬 Access to TMbed**: Easy access to state-of-the-art transmembrane protein prediction
 - **⚡ Simplified Workflow**: Run TMbed through a user-friendly 3-cell notebook interface
-- **📁 FASTA Upload**: Simple file upload with automatic processing
+- **📁 FASTA Upload**: Simple file upload with automatic processing and .gz decompression support
+- **🏷️ Custom Prefixes**: Add custom prefixes to output files for better organization
 - **☁️ Google Drive Integration**: Optional automatic upload of results to your Google Drive
 - **🔧 Multiple Output Formats**: Choose from 5 different output formats with automatic GFF conversion for all formats
 - **📊 Comprehensive Results**: Prediction files with GFF format for downstream analysis (all formats supported)
@@ -37,6 +38,8 @@ This Google Colab notebook provides an easy-to-use interface for **TMbed**, a tr
 Upload protein sequences in FASTA format for batch processing with:
 - Automatic file validation and processing
 - Support for multi-sequence FASTA files
+- **Automatic .gz decompression**: Upload compressed FASTA files and they'll be automatically decompressed
+- **Custom file prefixes**: Add prefixes like "experiment1_" to organize output files
 - Clean filename handling (removes Colab duplicate numbering)
 
 ## Configuration Options
@@ -69,6 +72,10 @@ Each prediction generates:
 - **GFF file**: Converted GFF3 format for ALL formats (for genome browsers and annotation tools)
 - **Google Drive upload**: Automatic cloud storage when enabled
 - **Local download**: Fallback download when Google Drive unavailable
+
+**Example file naming (input: `RLPs.fasta`, prefix: `experiment1_`)**:
+- `experiment1_RLPs.pred` (prediction file)
+- `experiment1_RLPs.gff` (GFF annotation file)
 
 ### Format Examples
 
@@ -186,9 +193,10 @@ For the official TMbed implementation and latest updates, please visit the [offi
 - **Download Problems**: Verify browser allows downloads from Colab
 
 **File Format Requirements:**
-- FASTA files must have `.fasta`, `.fa`, or `.fas` extensions
+- FASTA files must have `.fasta`, `.fa`, or `.fas` extensions (`.gz` compression supported)
 - Sequences should contain only standard amino acid codes
 - Headers should start with `>` followed by sequence identifier
+- Compressed files (.gz) are automatically decompressed after upload
 
 ## Related Resources
 
